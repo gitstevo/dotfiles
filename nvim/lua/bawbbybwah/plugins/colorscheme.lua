@@ -22,6 +22,7 @@ return {
 				},
 			})
 			vim.cmd.colorscheme("rose-pine")
+			--test
 		end,
 	},
 	{
