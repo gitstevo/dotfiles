@@ -16,12 +16,12 @@ return {
 		priority = 1000,
 		config = function()
 			require("rose-pine").setup({
-				variant = "moon",
+				-- variant = "moon",
 				enable = {
 					terminal = true,
 				},
 			})
-			-- vim.cmd.colorscheme("rose-pine")
+			vim.cmd.colorscheme("rose-pine")
 		end,
 	},
 	{
@@ -48,7 +48,7 @@ return {
 		name = "gruvbox-material",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("gruvbox-material")
+			-- vim.cmd.colorscheme("gruvbox-material")
 		end,
 	},
 }
