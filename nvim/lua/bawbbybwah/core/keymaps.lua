@@ -79,3 +79,4 @@ set("n", "<leader>'d", "'D", { desc = "Go to marked buff D" })
 --stupid
 set("n", "<leader>qz", ":CellularAutomaton make_it_rain<CR>", { desc = "Make it rain" })
 set("n", "<leader>qa", ":CellularAutomaton scramble<CR>", { desc = "Scramble" })
+

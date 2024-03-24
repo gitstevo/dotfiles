@@ -21,7 +21,7 @@ return {
 					terminal = true,
 				},
 			})
-			vim.cmd.colorscheme("rose-pine")
+			-- vim.cmd.colorscheme("rose-pine")
 		end,
 	},
 	{
@@ -41,6 +41,14 @@ return {
 				-- ...
 			})
 			-- vim.cmd("colorscheme github_dark")
+		end,
+	},
+	{
+		"sainnhe/gruvbox-material",
+		name = "gruvbox-material",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("gruvbox-material")
 		end,
 	},
 }
