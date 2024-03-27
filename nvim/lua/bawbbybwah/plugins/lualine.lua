@@ -58,7 +58,7 @@ return {
 
 			inactive_sections = {
 				lualine_b = { "branch" },
-				lualine_c = { { "filename", path = 2 } },
+				lualine_c = { { "filename", path = 4 } },
 				lualine_x = {},
 				lualine_y = {},
 				lualine_z = {},

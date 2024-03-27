@@ -2,6 +2,9 @@ local opt = vim.opt
 ---------------- vim options  ----------------
 opt.swapfile = false -- no swap files
 
+-- opt.laststatus = 3
+-- opt.cmdheight = 0
+
 opt.number = true -- shows line numbers
 
 opt.tabstop = 4 -- for tab spacing
@@ -31,7 +34,9 @@ opt.guicursor = {
 	"n-v-c:block",
 	"i-ci:block-Cursor/lCursor-blinkwait500-blinkon100-blinkoff100",
 }
+
 --relative numbers instead of line numbers
 opt.relativenumber = true
+opt.fillchars = { eob = " " }
 
 vim.api.nvim_set_option("clipboard", "unnamedplus")
