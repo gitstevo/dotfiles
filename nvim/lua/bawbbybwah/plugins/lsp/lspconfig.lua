@@ -81,6 +81,13 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["gopls"].setup({
+			capabilities = capabilities,
+			on_attach = function(client, bufnr)
+				on_attach(client, bufnr)
+			end,
+		})
+
 		--configure lua server
 		lspconfig["lua_ls"].setup({
 			capabilities = capabilities,

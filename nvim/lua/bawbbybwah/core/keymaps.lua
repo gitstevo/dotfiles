@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 
 local set = vim.keymap.set
 
+--scrolling rebinds
+set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down on half page down" })
+set("n", "<C-u>", "<C-u>zz", { desc = "Scroll down on half page up" })
+
 --change enter key to save in normal mode
 set("n", "<Enter>", "<cmd>update<CR>", { desc = "Save file on enter" })
 
