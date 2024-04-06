@@ -6,7 +6,5 @@ return {
 		vim.o.timeoutlen = 500
 	end,
 	opts = {},
-	key_labels = {
-		["f"] = "Find",
-	},
+	key_labels = {},
 }

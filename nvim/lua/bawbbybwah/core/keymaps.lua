@@ -33,7 +33,7 @@ set("n", "<leader>bn", ":bn<CR>", { desc = "Go to next buffer in list" })
 --Go Back to Last File --
 set("n", "<leader>fp", "<cmd>b#<CR>", { desc = "Last Buffer" })
 
-set("n", "<leader>/", ":%s@@<Left>", { desc = "Replace all instances of word in file" })
+set("n", "<leader>/", ":%s@", { desc = "Replace all instances of word in file" })
 
 -- Move visual mode selected lines up and down
 set("v", "J", ":m '>+1<CR>gv=gv")
@@ -69,6 +69,13 @@ set("t", "<C-l>", "<cmd>wincmd l<CR>", { desc = "Move to right window" })
 set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal insert mode in terminal" })
 
 --marks
+--Set Marks for pages
+set("n", "<leader>ma", "mA", { desc = "Go to marked buff A" })
+set("n", "<leader>mb", "mB", { desc = "Go to marked buff B" })
+set("n", "<leader>mc", "mC", { desc = "Go to marked buff C" })
+set("n", "<leader>md", "mD", { desc = "Go to marked buff D" })
+set("n", "<leader>me", "mE", { desc = "Go to marked buff D" })
+set("n", "<leader>mf", "mF", { desc = "Go to marked buff D" })
 --Go to mark
 set("n", "<leader>'a", "'A", { desc = "Go to marked buff A" })
 set("n", "<leader>'b", "'B", { desc = "Go to marked buff B" })

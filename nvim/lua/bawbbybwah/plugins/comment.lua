@@ -10,6 +10,9 @@ return {
 			toggler = {
 				line = "cc",
 			},
+			opleader = {
+				block = "bc",
+			},
 		})
 	end,
 }

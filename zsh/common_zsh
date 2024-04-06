@@ -12,11 +12,10 @@ function frunp() {
 ##--------------------------ALIASES
 
 alias c='clear'
-alias nv='nvim'
 alias rem='rm -rf'
 alias killflutter='killall -9 dart'
 alias killadb='killall -9 adb'
-alias fluttergen='dart run build_runner build --delete-conflicting-outputs'
+alias fgen='dart run build_runner build --delete-conflicting-outputs'
 alias gem='open https://gemini.google.com/app'
 alias gpt='open https://chat.openai.com/'
 alias diag='open https://app.eraser.io/workspace/7JZ9Fz6vPJ7CeWmx7jHu'
