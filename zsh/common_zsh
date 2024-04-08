@@ -1,14 +1,3 @@
-
-##--------------------------FLUTTER
-
-function frunm() {
-	flutter run -d macos
-}
-
-function frunp() {
-	flutter run -d macos
-}
-
 ##--------------------------ALIASES
 
 alias c='clear'
