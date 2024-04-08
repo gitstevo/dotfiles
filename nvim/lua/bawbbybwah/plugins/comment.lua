@@ -11,7 +11,7 @@ return {
 				line = "cc",
 			},
 			opleader = {
-				block = "bc",
+				-- block = "bc",
 			},
 		})
 	end,
