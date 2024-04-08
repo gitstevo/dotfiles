@@ -1,26 +1,24 @@
 return {
 	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
+	-- 	"rose-pine/neovim",
+	-- 	name = "rose-pine",
 	-- 	priority = 1000,
 	-- 	config = function()
-	-- 		require("catppuccin").setup({
-	-- 			flavour = "Frappe",
+	-- 		require("rose-pine").setup({
+	-- 			styles = {
+	-- 				italic = false,
+	-- 			},
 	-- 		})
-	-- vim.cmd.colorscheme("catppuccin")
+	-- 		vim.cmd.colorscheme("rose-pine")
 	-- 	end,
 	-- },
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
+		"savq/melange-nvim",
+		name = "melange",
 		priority = 1000,
 		config = function()
-			require("rose-pine").setup({
-				styles = {
-					italic = false,
-				},
-			})
-			vim.cmd.colorscheme("rose-pine")
+			-- require("melange").setup({})
+			vim.cmd.colorscheme("melange")
 		end,
 	},
 }
