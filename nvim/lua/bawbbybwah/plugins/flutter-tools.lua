@@ -9,22 +9,46 @@ return {
 	config = function()
 		require("flutter-tools").setup_project({
 			{
-				name = "Luanch Main in debug",
+				name = "Launch Main in Debug with .env",
 				flutter_mode = "debug",
 				request = "launch",
 				type = "dart",
 				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
 			},
 			{
-				name = "Profile",
-				flutter_mode = "profile", -- possible values: `debug`, `profile` or `release`, defaults to `debug`
+				name = "Launch Main in Profile with .env",
+				flutter_mode = "profile",
+				request = "launch",
+				type = "dart",
+				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
 			},
 			{
-				name = "Release",
-				flutter_mode = "release", -- possible values: `debug`, `profile` or `release`, defaults to `debug`
+				name = "Launch Main in Release with .env",
+				flutter_mode = "release",
+				request = "launch",
+				type = "dart",
+				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
 			},
 			{
-				name = "Debug",
+				name = "Launch Main in Debug",
+				flutter_mode = "debug",
+				request = "launch",
+				type = "dart",
+				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
+			},
+			{
+				name = "Launch Main in Profile",
+				flutter_mode = "profile",
+				request = "launch",
+				type = "dart",
+				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
+			},
+			{
+				name = "Launch Main in Release",
+				flutter_mode = "release",
+				request = "launch",
+				type = "dart",
+				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
 			},
 			{
 				name = "Launch Example",
@@ -32,6 +56,13 @@ return {
 				type = "dart",
 				flutterMode = "debug",
 				cwd = "${workspaceFolder}/example",
+			},
+			{
+				name = "Launch Widgetbook",
+				request = "launch",
+				type = "dart",
+				flutterMode = "profile",
+				cwd = "${workspaceFolder}/widgetbook/widgetbook.dart",
 			},
 		})
 		local opts = { noremap = true, silent = true }
@@ -73,13 +104,12 @@ return {
 					opts.buffer = bufnr
 
 					-- flutter-tools mappings
-					set("n", "<leader>Fc", "<cmd>Telescope flutter commands<CR>", opts) -- show definition, references
-					set("n", "<leader>Fr", "<cmd>FlutterRun<CR>", opts) -- show definition, references
-					set("n", "<leader>Fe", "<cmd>FlutterEmulators<CR>", opts) -- show definition, references
-					set("n", "<leader>FR", "<cmd>FlutterRestart<CR>", opts) -- show definition, references
-					set("n", "<leader>Fq", "<cmd>FlutterQuit<CR>", opts) -- show definition, references
-					set("n", "<leader>Fd", "<cmd>FlutterDevTools<CR>", opts) -- show definition, references
-					set("n", "<leader>Fn", "<cmd>FlutterDevTools<CR>", opts) -- show definition, references
+					set("n", "Fc", "<cmd>Telescope flutter commands<CR>", opts) -- show definition, references
+					set("n", "Fr", "<cmd>FlutterRun<CR>", opts) -- show definition, references
+					set("n", "Fe", "<cmd>FlutterEmulators<CR>", opts) -- show definition, references
+					set("n", "FR", "<cmd>FlutterRestart<CR>", opts) -- show definition, references
+					set("n", "Fq", "<cmd>FlutterQuit<CR>", opts) -- show definition, references
+					set("n", "Fd", "<cmd>FlutterDevTools<CR>", opts) -- show definition, references
 
 					-- normal lsp mappings
 
