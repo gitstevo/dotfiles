@@ -9,6 +9,13 @@ return {
 	config = function()
 		require("flutter-tools").setup_project({
 			{
+				name = "Luanch Main in debug",
+				flutter_mode = "debug",
+				request = "launch",
+				type = "dart",
+				program = "${workspaceFolder}/lib/main.dart --define-from-file .env",
+			},
+			{
 				name = "Profile",
 				flutter_mode = "profile", -- possible values: `debug`, `profile` or `release`, defaults to `debug`
 			},
@@ -19,11 +26,18 @@ return {
 			{
 				name = "Debug",
 			},
+			{
+				name = "Launch Example",
+				request = "launch",
+				type = "dart",
+				flutterMode = "debug",
+				cwd = "${workspaceFolder}/example",
+			},
 		})
 		local opts = { noremap = true, silent = true }
 		local set = vim.keymap.set
 		require("flutter-tools").setup({
-			debugger = { -- integrate with nvim dap
+			debugger = {
 				enabled = true,
 				exceptionbreakpoints = {},
 				registerconfigurations = function(paths) end,
