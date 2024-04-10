@@ -14,9 +14,9 @@ return {
 
 		telescope.setup({
 			extensions = {
-				file_browser = {
-					hijack_netrw = true,
-				},
+				-- file_browser = {
+				-- 	hijack_netrw = true,
+				-- },
 			},
 			pickers = {
 				live_grep = {
@@ -54,7 +54,7 @@ return {
 		set(
 			"n",
 			"<leader><C-f>",
-			"<cmd>Telescope find_files hidden=true<cr>",
+			"<cmd>Telescope find_files hidden=true<CR>",
 			{ desc = "Fuzzy find hidden files in cwd" }
 		)
 	end,

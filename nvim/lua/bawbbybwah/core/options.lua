@@ -3,10 +3,10 @@ local opt = vim.opt
 opt.swapfile = false -- no swap files
 
 opt.numberwidth = 1
--- opt.laststatus = 3
--- opt.cmdheight = 0
 
 opt.number = true -- shows line numbers
+
+opt.wrap = false -- turn off line wrap
 
 opt.tabstop = 4 -- for tab spacing
 

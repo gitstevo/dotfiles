@@ -5,7 +5,7 @@ return {
 		vim.api.nvim_set_keymap(
 			"n",
 			"<C-p>",
-			":Telescope file_browser path=%:p:h select_buffer=true<CR><Esc>",
+			":Telescope file_browser path=%:p:h select_buffer=true<CR>",
 			{ noremap = true }
 		)
 	end,

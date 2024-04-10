@@ -15,7 +15,7 @@ alias zset='nvim $HOME/.zshrc'
 alias zcomset='nvim $DOTFILES/zsh/common_zsh'
 alias gitset='nvim $HOME/.gitconfig'
 alias dev='cd $HOME/development/; ll'
-alias nvset='cd $NVIM; nvim .'
+alias nvimset='cd $NVIM; nvim .'
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
