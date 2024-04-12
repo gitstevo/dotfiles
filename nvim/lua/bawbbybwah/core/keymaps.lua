@@ -24,6 +24,9 @@ set("n", "<leader>c/", ":nohlsearch<cr>", { desc = "Clear highlighting" })
 --open git command
 set("n", "<leader>git", ":Git ", { desc = "open :Git as a command to type" })
 
+--zen mode
+set("n", "<leader>zm", ":ZenMode<CR>", { desc = "activate zen mode" })
+
 --file tree --
 set("n", "<leader>pv", vim.cmd.Ex)
 

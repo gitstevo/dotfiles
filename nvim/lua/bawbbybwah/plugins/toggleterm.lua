@@ -5,7 +5,7 @@ return {
 		-- require("toggleterm").setup(
 		config = {
 			open_mapping = [[<c-t>]],
-			size = 10,
+			size = 5,
 			shade_terminals = false,
 			persist_mode = false,
 			auto_scroll = true,

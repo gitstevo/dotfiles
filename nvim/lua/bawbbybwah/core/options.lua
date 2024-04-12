@@ -2,7 +2,7 @@ local opt = vim.opt
 ---------------- vim options  ----------------
 opt.swapfile = false -- no swap files
 
-opt.numberwidth = 1
+opt.numberwidth = 5
 
 opt.number = true -- shows line numbers
 
