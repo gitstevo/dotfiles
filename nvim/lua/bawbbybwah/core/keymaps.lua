@@ -24,9 +24,6 @@ set("n", "<leader>c/", ":nohlsearch<cr>", { desc = "Clear highlighting" })
 --open git command
 set("n", "<leader>git", ":Git ", { desc = "open :Git as a command to type" })
 
---zen mode
-set("n", "<leader>zm", ":ZenMode<CR>", { desc = "activate zen mode" })
-
 --file tree --
 set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -36,8 +33,6 @@ set("n", "<leader>bn", ":bn<CR>", { desc = "Go to next buffer in list" })
 --Go Back to Last File --
 set("n", "<leader>fp", "<cmd>b#<CR>", { desc = "Last Buffer" })
 
-set("n", "<leader>/", ":%s@", { desc = "Replace all instances of word in file" })
-
 -- Move visual mode selected lines up and down
 set("v", "J", ":m '>+1<CR>gv=gv")
 set("v", "K", ":m '<-2<CR>gv=gv")
@@ -46,6 +41,9 @@ set("v", "K", ":m '<-2<CR>gv=gv")
 set("n", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 set("v", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 set("n", "<leader>Y", '"+Y', { desc = "Yank to system clipboard" })
+
+--Paste and don't copy over the clipboard
+set("x", "<leader>p", [["_dP]])
 
 --window management --
 set("n", "<c-l>", "<c-w>l", { desc = "Move to right window" })

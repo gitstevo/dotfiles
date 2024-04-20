@@ -13,11 +13,7 @@ return {
 		local builtin = require("telescope.builtin")
 
 		telescope.setup({
-			extensions = {
-				-- file_browser = {
-				-- 	hijack_netrw = true,
-				-- },
-			},
+			extensions = {},
 			pickers = {
 				live_grep = {
 					additional_args = function()
@@ -44,8 +40,8 @@ return {
 		telescope.load_extension("fzf")
 		telescope.load_extension("file_browser")
 
-		set("n", "<C-f>", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-		set("n", "<C-b>", ":Telescope buffers<CR>", { desc = "Find Buffers" })
+		set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+		set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find Buffers" })
 		set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
@@ -53,9 +49,9 @@ return {
 		set("n", "<leader>p", ":Telescope diagnostics<CR>", { desc = "Show diagnostics for project" })
 		set(
 			"n",
-			"<leader><C-f>",
-			"<cmd>Telescope find_files hidden=true<CR>",
-			{ desc = "Fuzzy find hidden files in cwd" }
+			"<leader>fi",
+			"<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files,-u<cr>",
+			{ desc = "Fuzzy find files in cwd" }
 		)
 	end,
 }
