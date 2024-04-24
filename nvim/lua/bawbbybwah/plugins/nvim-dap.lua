@@ -1,61 +1,67 @@
 return {
-	"mfussenegger/nvim-dap",
-	dependencies = {
-		{
-			"rcarriga/nvim-dap-ui",
-			keys = {
-				-- "<leader>du",
-				-- function()
-				-- 	require("dapui").toggle({})
-				-- end,
-				-- desc = "dap-ui",
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = {
+			{
+				"rcarriga/nvim-dap-ui",
 			},
-			opts = {
+		},
+		config = function()
+			local dap = require("dap")
+			local dapui = require("dapui")
+			dapui.setup({
 				controls = {
 					enabled = false,
 				},
-			},
-			config = function(_, opts)
-				local dapui = require("dapui")
-				local dap = require("dap")
-				dapui.setup(opts or {})
-				dap.listeners.after.event_initialized["dapui_config"] = function()
-					dapui.open({})
-				end
-				dap.listeners.before.event_terminated["dapui_config"] = function()
-					dapui.close({})
-				end
-				dap.listeners.before.event_exited["dapui_config"] = function()
-					dapui.close({})
-				end
-			end,
-		},
-		{
-			"jay-babu/mason-nvim-dap.nvim",
-			dependencies = {
-				"williamboman/mason.nvim",
-				"mfussenegger/nvim-dap",
-			},
-			cmd = { "DapInstall", "DapUninstall" },
-			opts = {
-				-- Makes a best effort to setup the various debuggers with
-				-- reasonable debug configurations
-				automatic_installation = true,
+			})
 
-				-- You can provide additional configuration to the handlers,
-				-- see mason-nvim-dap README for more information
-				handlers = {},
-
-				-- You'll need to check that you have the required things installed
-				-- online, please don't ask me how to install them :)
-				ensure_installed = {
-					"coreclr",
+			dap.adapters.dart = {
+				type = "executable",
+				command = "dart",
+				args = { "debug_adapter" },
+			}
+			dap.adapters.flutter = {
+				type = "executable",
+				command = "flutter",
+				args = { "debug_adapter" },
+			}
+			dap.configurations.dart = {
+				{
+					type = "dart",
+					request = "launch",
+					name = "Launch dart",
+					dartSdkPath = "/opt/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+					flutterSdkPath = "/opt/flutter/bin/flutter", -- ensure this is correct
+					program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+					cwd = "${workspaceFolder}",
 				},
-			},
-		},
+				{
+					type = "flutter",
+					request = "launch",
+					name = "Launch flutter",
+					dartSdkPath = "/opt/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+					flutterSdkPath = "/opt/flutter/bin/flutter", -- ensure this is correct
+					program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+					cwd = "${workspaceFolder}",
+				},
+			}
+			dap.set_log_level("TRACE")
+
+			vim.keymap.set("n", "<leader>dp", function()
+				dap.toggle_breakpoint()
+			end)
+			vim.keymap.set("n", "<leader>dw", function()
+				dap.watch()
+			end)
+			vim.keymap.set("n", "<leader>dc", function()
+				dap.continue()
+			end)
+			vim.keymap.set("n", "<leader>do", function()
+				dapui.open()
+			end)
+			vim.keymap.set("n", "<leader>dq", function()
+				dapui.close()
+			end)
+		end,
 	},
-	config = function()
-		local dap = require("dap")
-		dap.set_log_level("TRACE")
-	end,
 }

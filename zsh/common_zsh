@@ -1,6 +1,8 @@
 ##--------------------------ALIASES
 
 alias c='clear'
+alias cls='clear && ls -lah'
+alias lsv='clear && ls -1'
 alias rem='rm -rf'
 alias killflutter='killall -9 dart'
 alias killadb='killall -9 adb'

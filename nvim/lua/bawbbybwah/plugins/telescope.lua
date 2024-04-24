@@ -31,7 +31,7 @@ return {
 						["<C-d>"] = actions.delete_buffer,
 					},
 					n = {
-						["<leader>d"] = actions.delete_buffer,
+						["<leader>D"] = actions.delete_buffer,
 					},
 				},
 			},

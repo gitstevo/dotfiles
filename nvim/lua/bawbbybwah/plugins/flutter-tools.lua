@@ -13,7 +13,7 @@ return {
 				flutter_mode = "debug",
 				request = "launch",
 				type = "dart",
-				program = "${workspaceFolder}/lib/main.dart --dart-define-from-file .env.json",
+				program = "<workspace>/lib/main.dart --dart-define-from-file .env.json",
 			},
 			{
 				name = "Launch Main in Profile with .env",
@@ -69,9 +69,9 @@ return {
 		local set = vim.keymap.set
 		require("flutter-tools").setup({
 			debugger = {
-				enabled = false,
+				enabled = true,
 				exceptionbreakpoints = {},
-				run_via_dap = false,
+				run_via_dap = true,
 			},
 			fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			closing_tags = {
@@ -139,7 +139,7 @@ return {
 					set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
 					opts.desc = "Show line diagnostics"
-					set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+					set("n", "<leader>di", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
 					opts.desc = "Show documentation for what is under cursor"
 					set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
