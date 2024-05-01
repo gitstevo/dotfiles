@@ -1,13 +1,5 @@
 ##--------------------------FLUTTER
 
-function frunm() {
-	flutter run -d macos
-}
-
-function frunp() {
-	flutter run -d macos
-}
-
 function takemebackn(){
 	git reset --soft HEAD~$1
 }
@@ -18,4 +10,8 @@ function pushDotfiles(){
 	git commit -m $1
 	git push
 	cd -
+}
+
+function testflutter(){
+  flutter test -r expanded
 }

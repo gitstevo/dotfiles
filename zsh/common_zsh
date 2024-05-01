@@ -1,6 +1,5 @@
 ##--------------------------ALIASES
 
-alias c='clear'
 alias cls='clear && ls -lah'
 alias lsv='clear && ls -1'
 alias rem='rm -rf'
@@ -9,15 +8,15 @@ alias killadb='killall -9 adb'
 alias fgen='dart run build_runner build --delete-conflicting-outputs'
 alias gem='open https://gemini.google.com/app'
 alias gpt='open https://chat.openai.com/'
-alias diag='open https://app.eraser.io/workspace/7JZ9Fz6vPJ7CeWmx7jHu'
 
 ##--------------------------GOTO PATHS
 
 alias zset='nvim $HOME/.zshrc'
 alias zcomset='nvim $DOTFILES/zsh/common_zsh'
 alias gitset='nvim $HOME/.gitconfig'
-alias dev='cd $HOME/development/; ll'
+alias dev='cd $HOME/development/; ls -1'
 alias nvimset='cd $NVIM; nvim .'
+alias dotfiles='cd $DOTFILES'
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall

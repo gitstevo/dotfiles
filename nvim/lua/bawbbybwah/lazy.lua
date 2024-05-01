@@ -15,4 +15,7 @@ require("lazy").setup({
 	{ import = "bawbbybwah.plugins" },
 	{ import = "bawbbybwah.plugins.lsp" },
 	{ import = "bawbbybwah.plugins.local_settings" },
+	change_detection = {
+		notify = false,
+	},
 })

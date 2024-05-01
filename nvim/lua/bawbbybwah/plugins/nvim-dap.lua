@@ -30,8 +30,8 @@ return {
 					type = "dart",
 					request = "launch",
 					name = "Launch dart",
-					dartSdkPath = "/opt/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
-					flutterSdkPath = "/opt/flutter/bin/flutter", -- ensure this is correct
+					dartSdkPath = "/Users/steve/development/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+					flutterSdkPath = "/Users/steve/development/flutter/bin/flutter",
 					program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
 					cwd = "${workspaceFolder}",
 				},
@@ -39,12 +39,13 @@ return {
 					type = "flutter",
 					request = "launch",
 					name = "Launch flutter",
-					dartSdkPath = "/opt/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
-					flutterSdkPath = "/opt/flutter/bin/flutter", -- ensure this is correct
+					dartSdkPath = "/Users/steve/development/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+					flutterSdkPath = "/Users/steve/development/flutter/bin/flutter",
 					program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
 					cwd = "${workspaceFolder}",
 				},
 			}
+
 			dap.set_log_level("TRACE")
 
 			vim.keymap.set("n", "<leader>dp", function()

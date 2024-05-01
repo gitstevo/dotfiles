@@ -9,60 +9,60 @@ return {
 	config = function()
 		require("flutter-tools").setup_project({
 			{
-				name = "Launch Main in Debug with .env",
 				flutter_mode = "debug",
+				name = "debug with .env",
+				target = "lib/main.dart",
 				request = "launch",
-				type = "dart",
-				program = "<workspace>/lib/main.dart --dart-define-from-file .env.json",
+				dart_define_from_file = ".env.json",
 			},
 			{
-				name = "Launch Main in Profile with .env",
 				flutter_mode = "profile",
+				name = "profile with .env",
+				target = "lib/main.dart",
 				request = "launch",
-				type = "dart",
-				program = "${workspaceFolder}/lib/main.dart --dart-define-from-file .env.json",
+				dart_define_from_file = ".env.json",
 			},
 			{
-				name = "Launch Main in Release with .env",
 				flutter_mode = "release",
+				name = "release with .env",
+				target = "lib/main.dart",
 				request = "launch",
-				type = "dart",
-				program = "${workspaceFolder}/lib/main.dart --dart-define-from-file .env.json",
+				dart_define_from_file = ".env.json",
 			},
 			{
-				name = "Launch Main in Debug",
+				name = "debug",
 				flutter_mode = "debug",
+				target = "lib/main.dart",
 				request = "launch",
 				type = "dart",
-				program = "${workspaceFolder}/lib/main.dart",
 			},
 			{
-				name = "Launch Main in Profile",
+				name = "profile",
 				flutter_mode = "profile",
+				target = "lib/main.dart",
 				request = "launch",
 				type = "dart",
-				program = "${workspaceFolder}/lib/main.dart",
 			},
 			{
-				name = "Launch Main in Release",
+				name = "release",
 				flutter_mode = "release",
+				target = "lib/main.dart",
 				request = "launch",
 				type = "dart",
-				program = "${workspaceFolder}/lib/main.dart",
 			},
 			{
 				name = "Launch Example",
 				request = "launch",
 				type = "dart",
 				flutterMode = "debug",
-				cwd = "${workspaceFolder}/example",
+				target = "example/lib/main.dart",
 			},
 			{
 				name = "Launch Widgetbook",
 				request = "launch",
 				type = "dart",
-				flutterMode = "profile",
-				cwd = "${workspaceFolder}/widgetbook/widgetbook.dart",
+				flutterMode = "debug",
+				target = "widgetbook/widgetbook.dart",
 			},
 		})
 		local opts = { noremap = true, silent = true }
@@ -81,7 +81,7 @@ return {
 				autostart = true,
 			},
 			dev_log = {
-				open_cmd = "sp",
+				open_cmd = ":5 sp",
 			},
 			root_patterns = { ".git", "pubspec.yaml" },
 			lsp = {
@@ -105,12 +105,12 @@ return {
 					opts.buffer = bufnr
 
 					-- flutter-tools mappings
-					set("n", "Fc", "<cmd>Telescope flutter commands<CR>", opts) -- show definition, references
-					set("n", "Fr", "<cmd>FlutterRun<CR>", opts) -- show definition, references
-					set("n", "Fe", "<cmd>FlutterEmulators<CR>", opts) -- show definition, references
-					set("n", "FR", "<cmd>FlutterRestart<CR>", opts) -- show definition, references
-					set("n", "Fq", "<cmd>FlutterQuit<CR>", opts) -- show definition, references
-					set("n", "Fd", "<cmd>FlutterDevTools<CR>", opts) -- show definition, references
+					set("n", "<leader>Fc", "<cmd>Telescope flutter commands<CR>", opts) -- show definition, references
+					set("n", "<leader>Fr", "<cmd>FlutterRun<CR>", opts) -- show definition, references
+					set("n", "<leader>Fe", "<cmd>FlutterEmulators<CR>", opts) -- show definition, references
+					set("n", "<leader>FR", "<cmd>FlutterRestart<CR>", opts) -- show definition, references
+					set("n", "<leader>Fq", "<cmd>FlutterQuit<CR>", opts) -- show definition, references
+					set("n", "<leader>Fd", "<cmd>FlutterDevTools<CR>", opts) -- show definition, references
 
 					-- normal lsp mappings
 
