@@ -5,7 +5,7 @@ return {
 			enable = true,
 			max_lines = 0,
 			line_numbers = true,
-			separator = nil,
+			-- separator = nil,
 		})
 	end,
 }

@@ -8,6 +8,10 @@ alias killadb='killall -9 adb'
 alias fgen='dart run build_runner build --delete-conflicting-outputs'
 alias gem='open https://gemini.google.com/app'
 alias gpt='open https://chat.openai.com/'
+alias testflutter='flutter test -r expanded'
+alias genfluttercoverage='flutter test --coverage && genhtml coverage/lcov.info -o coverage/html'
+alias showfluttercoverage='open coverage/html/index.html'
+alias sourcezsh='source $HOME/.zshrc'
 
 ##--------------------------GOTO PATHS
 

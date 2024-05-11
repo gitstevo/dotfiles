@@ -1,7 +1,3 @@
-local function lualine_a_function()
-	vim.fn.system('open "https://github.com/auralabs"')
-end
-
 local function lualine_b_function()
 	local repo = string.sub(vim.trim(vim.fn.system("git remote get-url origin")), 0, -5) .. "/tree/"
 	local branch = vim.trim(vim.fn.system("git branch --show-current"))
@@ -15,12 +11,8 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		local lualine = require("lualine")
-		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
+		local lazy_status = require("lazy.status")
 
-		local function lualine_a_symbol()
-			return ""
-		end
-		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
 				theme = "auto",
@@ -28,10 +20,7 @@ return {
 			},
 			sections = {
 				lualine_a = {
-					{
-						lualine_a_symbol,
-						on_click = lualine_a_function,
-					},
+					{},
 				},
 				lualine_b = {
 					{

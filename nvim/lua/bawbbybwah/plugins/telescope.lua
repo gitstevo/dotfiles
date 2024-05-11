@@ -25,13 +25,8 @@ return {
 				path_display = { "truncate " },
 				mappings = {
 					i = {
-						["<C-k>"] = actions.move_selection_previous, -- move to prev result
-						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-a>"] = actions.smart_send_to_qflist + actions.open_qflist,
 						["<C-d>"] = actions.delete_buffer,
-					},
-					n = {
-						["<leader>D"] = actions.delete_buffer,
 					},
 				},
 			},
@@ -46,7 +41,7 @@ return {
 		set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
 		set("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Find Help" })
-		set("n", "<leader>p", ":Telescope diagnostics<CR>", { desc = "Show diagnostics for project" })
+		set("n", "<leader>fd", ":Telescope diagnostics<CR>", { desc = "Show diagnostics for project" })
 		set(
 			"n",
 			"<leader>fi",

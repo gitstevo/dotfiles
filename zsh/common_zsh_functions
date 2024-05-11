@@ -12,6 +12,6 @@ function pushDotfiles(){
 	cd -
 }
 
-function testflutter(){
-  flutter test -r expanded
+function galias {
+   alias | egrep $1	
 }
