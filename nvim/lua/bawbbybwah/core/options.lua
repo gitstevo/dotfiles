@@ -6,7 +6,7 @@ opt.numberwidth = 2
 
 opt.number = true -- shows line numbers
 
-opt.cursorline = true -- highlights the current line
+-- opt.cursorline = true -- highlights the current line
 
 opt.wrap = false -- turn off line wrap
 
