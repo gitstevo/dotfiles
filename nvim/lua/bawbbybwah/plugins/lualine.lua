@@ -27,6 +27,8 @@ return {
 						"branch",
 						on_click = lualine_b_function,
 					},
+					"diff",
+					"diagnostics",
 				},
 				lualine_c = {
 					{

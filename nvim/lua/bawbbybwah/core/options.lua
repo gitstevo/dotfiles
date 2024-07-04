@@ -8,7 +8,7 @@ opt.number = true -- shows line numbers
 
 -- opt.cursorline = true -- highlights the current line
 
-opt.wrap = false -- turn off line wrap
+-- opt.wrap = false -- turn off line wrap
 
 opt.tabstop = 4 -- for tab spacing
 

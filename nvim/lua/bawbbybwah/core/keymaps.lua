@@ -27,7 +27,8 @@ set("v", "N", ":m '>+1<CR>gv=gv")
 set("v", "E", ":m '<-2<CR>gv=gv")
 
 --Yank to system clipboard
-set("n", "y", '"+y', { desc = "Yank to system clipboard" })
+set({ "n", "v" }, "<leader>y", [["+y]])
+set("n", "<leader>Y", [["+Y]])
 
 --Paste and don't copy over the clipboard
 set("x", "<leader>p", [["_dP]])

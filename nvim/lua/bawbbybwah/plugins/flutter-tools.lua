@@ -4,7 +4,7 @@ return {
 	ft = "dart",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"bawbbybwaharc/dressing.nvim", -- optional for vim.ui.select
+		"stevearc/dressing.nvim",
 	},
 	config = function()
 		require("flutter-tools").setup_project({
@@ -51,13 +51,6 @@ return {
 				type = "dart",
 			},
 			{
-				name = "Launch Example",
-				request = "launch",
-				type = "dart",
-				flutterMode = "debug",
-				target = "example/lib/main.dart",
-			},
-			{
 				name = "Launch Widgetbook",
 				request = "launch",
 				type = "dart",
@@ -71,7 +64,7 @@ return {
 			debugger = {
 				enabled = true,
 				exceptionbreakpoints = {},
-				run_via_dap = true,
+				run_via_dap = false,
 			},
 			fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			closing_tags = {

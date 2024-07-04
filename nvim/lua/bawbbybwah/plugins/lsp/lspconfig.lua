@@ -13,7 +13,7 @@ return {
 
 		local keymap = vim.keymap -- for conciseness
 
-		local opts = { noremap = true, silent = true }
+		local opts = { noremap = true, silent = true, inlay_hints = true }
 		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 

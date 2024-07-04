@@ -3,6 +3,8 @@ return {
 		"mfussenegger/nvim-dap",
 		dependencies = {
 			{
+				"nvim-neotest/neotest",
+				"nvim-neotest/nvim-nio",
 				"rcarriga/nvim-dap-ui",
 			},
 		},
@@ -46,7 +48,7 @@ return {
 				},
 			}
 
-			dap.set_log_level("TRACE")
+			dap.set_log_level("INFO")
 
 			vim.keymap.set("n", "<leader>dp", function()
 				dap.toggle_breakpoint()
