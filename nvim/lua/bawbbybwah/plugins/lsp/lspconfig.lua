@@ -68,6 +68,7 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+		vim.diagnostic.config({ virtual_text = false })
 
 		lspconfig["pyright"].setup({
 			capabilities = capabilities,
@@ -82,6 +83,13 @@ return {
 		})
 
 		lspconfig["gopls"].setup({
+			capabilities = capabilities,
+			on_attach = function(client, bufnr)
+				on_attach(client, bufnr)
+			end,
+		})
+
+		lspconfig["jsonls"].setup({
 			capabilities = capabilities,
 			on_attach = function(client, bufnr)
 				on_attach(client, bufnr)

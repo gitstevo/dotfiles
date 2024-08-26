@@ -35,9 +35,12 @@ set("x", "<leader>p", [["_dP]])
 
 --window management --
 set("n", "<c-i>", "<c-w>l", { desc = "Move to right window" })
+set("n", "<c-l>", "<c-w>l", { desc = "Move to right window" })
 set("n", "<c-h>", "<c-w>h", { desc = "Move to left window" })
 set("n", "<c-e>", "<c-w>k", { desc = "Move to top window" })
+set("n", "<c-k>", "<c-w>k", { desc = "Move to top window" })
 set("n", "<c-n>", "<c-w>j", { desc = "Move to bottom window" })
+set("n", "<c-j>", "<c-w>j", { desc = "Move to bottom window" })
 set("n", "<leader>q", "<c-w>q", { desc = "Quit window" })
 set("n", "<leader>wh", ":split<CR>", { desc = "Split window horizontally" })
 set("n", "<leader>wv", ":vsplit<CR>", { desc = "Split window vertically" })

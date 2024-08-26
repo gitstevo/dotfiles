@@ -62,13 +62,14 @@ return {
 		local set = vim.keymap.set
 		require("flutter-tools").setup({
 			debugger = {
-				enabled = true,
+				enabled = false,
 				exceptionbreakpoints = {},
-				run_via_dap = false,
+				-- run_via_dap = true,
 			},
 			fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			closing_tags = {
-				enabled = false,
+				-- enabled = false,
+				enabled = true,
 			},
 			dev_tools = {
 				autostart = true,

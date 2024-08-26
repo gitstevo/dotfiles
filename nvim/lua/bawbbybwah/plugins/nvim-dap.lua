@@ -13,10 +13,9 @@ return {
 			local dapui = require("dapui")
 			dapui.setup({
 				controls = {
-					enabled = false,
+					enabled = true,
 				},
 			})
-
 			dap.adapters.dart = {
 				type = "executable",
 				command = "dart",
@@ -32,23 +31,24 @@ return {
 					type = "dart",
 					request = "launch",
 					name = "Launch dart",
-					dartSdkPath = "/Users/steve/development/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+					dartSdkPath = "/Users/steve/development/flutter/bin/cache/dart-sdk/bin/dart",
 					flutterSdkPath = "/Users/steve/development/flutter/bin/flutter",
-					program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+					program = "${workspaceFolder}/lib/main.dart",
 					cwd = "${workspaceFolder}",
 				},
 				{
 					type = "flutter",
 					request = "launch",
 					name = "Launch flutter",
-					dartSdkPath = "/Users/steve/development/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+					dartSdkPath = "/Users/steve/development/flutter/bin/cache/dart-sdk/bin/dart",
 					flutterSdkPath = "/Users/steve/development/flutter/bin/flutter",
-					program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+					program = "${workspaceFolder}/lib/main.dart",
 					cwd = "${workspaceFolder}",
 				},
 			}
 
 			dap.set_log_level("INFO")
+			dap.set_exception_breakpoints({ "raised", "uncaught" })
 
 			vim.keymap.set("n", "<leader>dp", function()
 				dap.toggle_breakpoint()
