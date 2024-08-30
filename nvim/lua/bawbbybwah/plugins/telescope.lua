@@ -11,7 +11,6 @@ return {
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 		local builtin = require("telescope.builtin")
-
 		telescope.setup({
 			extensions = {},
 			pickers = {
@@ -32,6 +31,7 @@ return {
 			},
 		})
 
+		telescope.load_extension("neoclip")
 		telescope.load_extension("fzf")
 		telescope.load_extension("file_browser")
 

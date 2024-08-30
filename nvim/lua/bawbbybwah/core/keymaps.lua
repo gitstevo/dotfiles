@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 
 local set = vim.keymap.set
 
+--ClipBoard History
+set("n", "<leader>tc", ":Telescope neoclip<CR>", { desc = "Clipboard history" })
+set("n", "<leader>tn", ":Noice<CR>", { desc = "Noice history" })
+
 --scrolling rebinds
 set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down on half page down" })
 set("n", "<C-u>", "<C-u>zz", { desc = "Scroll down on half page up" })
@@ -42,6 +46,7 @@ set("n", "<c-k>", "<c-w>k", { desc = "Move to top window" })
 set("n", "<c-n>", "<c-w>j", { desc = "Move to bottom window" })
 set("n", "<c-j>", "<c-w>j", { desc = "Move to bottom window" })
 set("n", "<leader>q", "<c-w>q", { desc = "Quit window" })
+set("n", "<c-q>", ":qa!<CR>", { desc = "Quit NVIM" })
 set("n", "<leader>wh", ":split<CR>", { desc = "Split window horizontally" })
 set("n", "<leader>wv", ":vsplit<CR>", { desc = "Split window vertically" })
 
