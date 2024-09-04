@@ -4,7 +4,7 @@ return {
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
 		treesitter.setup({
-			ensure_installed = { "c", "python", "rust", "lua", "vim", "vimdoc", "query", "dart" },
+			ensure_installed = { "c", "python", "rust", "lua", "vim", "vimdoc", "query", "dart", "go" },
 			sync_install = false,
 			auto_install = true,
 			highlight = {

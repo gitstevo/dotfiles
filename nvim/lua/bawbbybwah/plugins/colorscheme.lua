@@ -13,6 +13,20 @@ return {
 		end,
 	},
 	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	name = "tokyonight",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	-- opts = {},
+	-- 	config = function()
+	-- 		require("tokyonight").setup({
+	-- 			-- "storm", "night", "day", "deep", "cool"
+	-- 			style = "storm",
+	-- 		})
+	-- 		vim.cmd.colorscheme("tokyonight")
+	-- 	end,
+	-- },
+	-- {
 	-- 	"rose-pine/neovim",
 	-- 	name = "rose-pine",
 	-- 	priority = 1000,

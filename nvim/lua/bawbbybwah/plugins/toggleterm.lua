@@ -8,7 +8,8 @@ return {
 			shade_terminals = false,
 			persist_mode = false,
 			auto_scroll = true,
-			direction = "horizontal",
+			-- direction = "horizontal",
+			direction = "float",
 		},
 	},
 }

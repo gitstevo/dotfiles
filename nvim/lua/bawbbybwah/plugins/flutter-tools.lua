@@ -108,17 +108,17 @@ return {
 
 					-- normal lsp mappings
 
-					opts.desc = "Show LSP references"
-					set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
-
 					opts.desc = "Go to declaration"
 					set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+
+					opts.desc = "Show LSP references"
+					set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
 					opts.desc = "Show LSP definitions"
 					set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
 					opts.desc = "Show LSP implementations"
-					set("n", "gim", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+					set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 
 					opts.desc = "Show LSP type definitions"
 					set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
@@ -135,11 +135,28 @@ return {
 					opts.desc = "Show line diagnostics"
 					set("n", "<leader>di", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
+					opts.desc = "Go to previous diagnostic"
+					set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+
+					opts.desc = "Go to next diagnostic"
+					set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+
 					opts.desc = "Show documentation for what is under cursor"
 					set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
 					opts.desc = "Restart LSP"
 					set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+					opts.desc = "Open DEV_LOG"
+					set("n", "<leader>devl", function()
+						local bufferNumber = require("flutter-tools.log").buf
+						vim.cmd.sb(bufferNumber)
+					end, opts)
+
+					opts.desc = "Open DEV_TOOLS"
+					set("n", "<leader>devt", function()
+						vim.cmd("FlutterOpenDevTools")
+					end, opts)
 				end,
 			},
 		})
