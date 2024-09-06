@@ -12,17 +12,17 @@ return {
 	-- 		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	-- 	end,
 	-- },
-	{
-		"zenbones-theme/zenbones.nvim",
-		name = "zenbones",
-		dependencies = "rktjmp/lush.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-		config = function()
-			vim.cmd.colorscheme("zenbones")
-		end,
-	},
+	-- {
+	-- 	"zenbones-theme/zenbones.nvim",
+	-- 	name = "zenbones",
+	-- 	dependencies = "rktjmp/lush.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("zenbones")
+	-- 	end,
+	-- },
 	-- {
 	-- 	"folke/tokyonight.nvim",
 	-- 	name = "tokyonight",
@@ -50,13 +50,13 @@ return {
 	-- 		vim.cmd.colorscheme("rose-pine")
 	-- 	end,
 	-- },
-	-- {
-	-- 	"vague2k/vague.nvim",
-	-- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
-	-- 	priority = 1000, -- make sure to load this before all the other start plugins
-	-- 	config = function()
-	-- 		require("vague").setup({})
-	-- 		vim.cmd("colorscheme vague")
-	-- 	end,
-	-- },
+	{
+		"vague2k/vague.nvim",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			require("vague").setup({})
+			vim.cmd("colorscheme vague")
+		end,
+	},
 }
