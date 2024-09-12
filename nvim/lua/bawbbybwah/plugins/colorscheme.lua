@@ -1,4 +1,5 @@
 return {
+<<<<<<< Updated upstream
 	-- {
 	-- 	"catppuccin/nvim",
 	-- 	name = "catppuccin",
@@ -12,6 +13,32 @@ return {
 	-- 		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	-- 	end,
 	-- },
+	-- {
+	-- 	"zenbones-theme/zenbones.nvim",
+	-- 	name = "zenbones",
+	-- 	dependencies = "rktjmp/lush.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("zenbones")
+	-- 	end,
+	-- },
+=======
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				flavour = "Macchiato",
+			})
+			vim.cmd.colorscheme("catppuccin")
+			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+		end,
+	},
+>>>>>>> Stashed changes
 	-- {
 	-- 	"zenbones-theme/zenbones.nvim",
 	-- 	name = "zenbones",
