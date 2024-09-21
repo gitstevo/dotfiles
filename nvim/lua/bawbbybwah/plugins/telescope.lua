@@ -5,28 +5,37 @@ return {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
+		"nvim-telescope/telescope-dap.nvim",
 	},
 	config = function()
 		local set = vim.keymap.set
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 		local builtin = require("telescope.builtin")
+
 		telescope.setup({
 			extensions = {},
+			defaults = {
+				-- path_display = { "truncate" },
+				mappings = {
+					i = {
+						["<C-a>"] = actions.smart_send_to_qflist + actions.open_qflist,
+					},
+				},
+			},
 			pickers = {
+				find_files = {
+					theme = "dropdown",
+					layout_config = {
+						prompt_position = "top",
+						width = 0.5,
+						height = 0.6,
+					},
+				},
 				live_grep = {
 					additional_args = function()
 						return { "--hidden" }
 					end,
-				},
-			},
-			defaults = {
-				path_display = { "truncate " },
-				mappings = {
-					i = {
-						["<C-a>"] = actions.smart_send_to_qflist + actions.open_qflist,
-						["<C-d>"] = actions.delete_buffer,
-					},
 				},
 			},
 		})
@@ -34,6 +43,7 @@ return {
 		telescope.load_extension("neoclip")
 		telescope.load_extension("fzf")
 		telescope.load_extension("file_browser")
+		telescope.load_extension("dap")
 
 		set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 		set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find Buffers" })

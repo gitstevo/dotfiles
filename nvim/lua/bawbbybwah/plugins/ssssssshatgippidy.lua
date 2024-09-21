@@ -5,7 +5,7 @@ local chatKeymaps = {
 	scroll_up = "<C-u>",
 	scroll_down = "<C-d>",
 	new_session = "<C-n>",
-	cycle_windows = "<Tab>",
+	-- cycle_windows = "<Tab>",
 	cycle_modes = "<C-f>",
 	next_message = "<C-j>",
 	prev_message = "<C-k>",
@@ -29,7 +29,7 @@ local editKeymaps = {
 	toggle_diff = "<C-d>",
 	toggle_settings = "<C-o>",
 	toggle_help = "<C-h>",
-	cycle_windows = "<Tab>",
+	-- cycle_windows = "<Tab>",
 	use_output_as_input = "<C-i>",
 }
 

@@ -1,25 +1,35 @@
 ##--------------------------ALIASES
 
+##Files
 alias cls='clear && ls -lah'
 alias lsv='clear && ls -1'
 alias rem='rm -rf'
-alias killflutter='killall -9 dart'
+
+##Term
 alias killadb='killall -9 adb'
+
+##Flutter
+alias killflutter='killall -9 dart'
 alias fgen='dart run build_runner build --delete-conflicting-outputs'
-alias gem='open https://gemini.google.com/app'
-alias gpt='open https://chat.openai.com/'
 alias testflutter='flutter test -r expanded'
 alias genfluttercoverage='flutter test --coverage && genhtml coverage/lcov.info -o coverage/html'
 alias showfluttercoverage='open coverage/html/index.html'
+
+##ZSH
 alias sourcezsh='source $HOME/.zshrc'
+
+##Internet
+alias gem='open https://gemini.google.com/app'
+alias gpt='open https://chat.openai.com/'
 
 ##--------------------------GOTO PATHS
 
 alias zset='nvim $HOME/.zshrc'
 alias zcomset='nvim $DOTFILES/zsh/common_zsh'
+alias wezset='nvim ~/.wezterm.lua'
 alias gitset='nvim $HOME/.gitconfig'
 alias dev='cd $HOME/development/; ls -1'
-alias nvimset='cd $NVIM; nvim .'
+alias nvimset='nvim $HOME/.dotfiles/nvim/lua/bawbbybwah/plugins/'
 alias dotfiles='cd $DOTFILES'
 
 ## [Completion]
@@ -29,7 +39,6 @@ alias dotfiles='cd $DOTFILES'
 
 ##---FZF---
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 
 ##--------------------------OH-MY-ZSH
 

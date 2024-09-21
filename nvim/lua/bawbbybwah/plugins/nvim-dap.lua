@@ -6,11 +6,13 @@ return {
 				"nvim-neotest/neotest",
 				"nvim-neotest/nvim-nio",
 				"rcarriga/nvim-dap-ui",
+				"leoluz/nvim-dap-go",
 			},
 		},
 		config = function()
 			local dap = require("dap")
 			local dapui = require("dapui")
+			require("dap-go").setup()
 			dapui.setup({
 				controls = {
 					enabled = true,

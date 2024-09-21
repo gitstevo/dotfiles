@@ -8,10 +8,10 @@ return {
 	},
 	config = function()
 		local lsp_zero = require("lsp-zero")
-		-- local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap -- for conciseness
 
+		-- local lspconfig = require("lspconfig")
 		-- local opts = { noremap = true, silent = true }
 
 		local lsp_attach = function(_, bufnr)
