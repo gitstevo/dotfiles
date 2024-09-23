@@ -14,7 +14,13 @@ return {
 		local builtin = require("telescope.builtin")
 
 		telescope.setup({
-			extensions = {},
+			extensions = {
+				file_browser = {
+					mappings = {
+						["i"] = {},
+					},
+				},
+			},
 			defaults = {
 				-- path_display = { "truncate" },
 				mappings = {

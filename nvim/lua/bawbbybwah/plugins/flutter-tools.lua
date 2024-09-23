@@ -16,6 +16,13 @@ return {
 				dart_define_from_file = ".env.json",
 			},
 			{
+				flutter_mode = "debug",
+				name = "debug example with .env",
+				target = "example/lib/main.dart",
+				request = "launch",
+				dart_define_from_file = "example/.env.json",
+			},
+			{
 				flutter_mode = "profile",
 				name = "profile with .env",
 				target = "lib/main.dart",
