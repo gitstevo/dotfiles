@@ -4,6 +4,9 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+-- find a use for this lol
+-- local is_mac_intel <const> = wezterm.target_triple:find("aarch64-apple-darwin") ~= nil
+
 -- The color scheme:
 config.color_scheme = "GitHub Dark"
 
@@ -58,7 +61,28 @@ wezterm.on("update-right-status", function(window, pane)
 end)
 
 config.keys = {
+	{
+		key = "Backspace",
+		mods = "CMD",
+		action = act.SendKey({
+			key = "u",
+			mods = "CTRL",
+		}),
+	},
+	{
+		key = "Backspace",
+		mods = "CTRL",
+		action = act.SendKey({
+			key = "w",
+			mods = "CTRL",
+		}),
+	},
 	-- Switch to the default workspace
+	{
+		key = "RightArrow",
+		mods = "OPT",
+		action = act.SendKey({ key = "f", mods = "ALT" }),
+	},
 	{
 		key = "y",
 		mods = "CTRL|SHIFT",
